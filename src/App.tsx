@@ -3,7 +3,7 @@ import { browserHistory } from "@utils";
 import { Route, Routes } from "react-router-dom";
 import { URLS } from "./const";
 import { Main } from "@pages/Main/Main";
-import {HistoryRouter} from "@components";
+import { HistoryRouter } from "@components";
 
 function App() {
   return (

@@ -1,2 +1,2 @@
-export * from './browserHistory/browserHistory'
-export * from './api'
+export * from "./browserHistory/browserHistory";
+export * from "./api";

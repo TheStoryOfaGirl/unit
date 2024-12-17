@@ -4,7 +4,12 @@
 
 body {
   font-family: "NT Sakharov", sans-serif;
-  font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "kern" 1;
+  font-feature-settings:
+    "ss01" 1,
+    "ss02" 1,
+    "ss03" 1,
+    "ss04" 1,
+    "kern" 1;
   margin: 0;
   padding: 0;
   background-color: #000000;

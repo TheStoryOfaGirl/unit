@@ -6,7 +6,7 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Product-manager",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
   {
     id: 7,
@@ -15,7 +15,7 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Дезигнер",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
   {
     id: 8,
@@ -24,7 +24,7 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Дезигнер",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
   {
     id: 9,
@@ -33,7 +33,7 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Дезигнер",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
   {
     id: 10,
@@ -42,7 +42,7 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Дезигнер",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
   {
     id: 11,
@@ -51,7 +51,7 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Дезигнер",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
   {
     id: 12,
@@ -60,6 +60,6 @@ export const mockMembers = [
     social_link: "lenin.com",
     description: "Описание",
     position: "Дезигнер",
-    srcImage: "/src/assets/img/member.jpg"
+    image: "/src/assets/img/member.jpg",
   },
 ];

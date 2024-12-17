@@ -3,7 +3,7 @@ export interface News {
   title: string;
   text: string;
   date_created: string;
-  srcImage: string;
+  image: string;
 }
 
 export interface Event {
@@ -22,7 +22,7 @@ export interface Member {
   social_link: string;
   description: string;
   position: string;
-  srcImage: string;
+  image: string;
 }
 
 export interface Project {
@@ -30,5 +30,12 @@ export interface Project {
   name: string;
   description: string;
   link: string;
-  srcImage: string;
+  image: string;
+}
+
+export interface FormValues {
+  name: string;
+  link: string;
+  links_text: string;
+  reason: string;
 }
