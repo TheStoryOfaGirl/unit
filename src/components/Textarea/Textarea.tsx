@@ -1,3 +1,5 @@
+import { SCREEN_SIZES } from "./../../const";
+import useWindowDimensions from "./../../hooks/useWindowDimensions";
 import { ComponentProps, forwardRef } from "react";
 
 interface TextareaProps extends ComponentProps<"textarea"> {
@@ -7,15 +9,16 @@ interface TextareaProps extends ComponentProps<"textarea"> {
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ isError, helperText, ...props }, ref) => {
+    const { width } = useWindowDimensions();
     return (
       <>
-        <div className="w-min rounded-lg">
+        <div className="w-full md:w-min rounded-lg">
           <textarea
             ref={ref}
-            className="py-3 px-5 text-2xl bg-black w-[569px] text-white rounded-lg resize-none overflow-hidden"
+            className="py-3 px-5 text-2xl bg-black box-border w-full md:w-[569px] text-white rounded-lg resize-none overflow-hidden"
             style={{ fontFamily: "NT Sakharov" }}
             {...props}
-            rows={3}
+            rows={width > SCREEN_SIZES.MOBILE ? 3 : 4}
           ></textarea>
         </div>
         {isError && helperText && (

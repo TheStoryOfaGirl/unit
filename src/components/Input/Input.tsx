@@ -10,10 +10,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ placeholder, helperText, isError, ...props }, ref) => {
     return (
       <>
-        <div className="border border-solid border-light-grey w-min rounded-lg">
+        <div className="border border-solid border-light-grey md:w-min rounded-lg focus:border-white">
           <input
             ref={ref}
-            className="py-3 px-5 text-2xl bg-black w-[334px] border-0 text-white rounded-lg"
+            className="py-3 px-5 text-2xl bg-black w-full box-border md:w-[334px] border-0 text-white rounded-lg"
             style={{ fontFamily: "NT Sakharov" }}
             placeholder={placeholder}
             {...props}

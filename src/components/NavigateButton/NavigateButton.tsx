@@ -2,15 +2,14 @@ import { Link } from "react-router-dom";
 
 interface NavigateButtonProps {
   text: string;
-  path: string;
 }
 
-export const NavigateButton = ({ text, path }: NavigateButtonProps) => {
+export const NavigateButton = ({ text }: NavigateButtonProps) => {
   return (
-    <div className="bg-grey rounded-md w-72 px-6 py-3">
+    <div className="bg-grey rounded-md md:px-6 md:py-3 w-full md:w-72">
       <Link
-        to={path}
-        className="text-left font-light text-white text-2xl m-0 underline block hover:transition hover:scale-105"
+        to={"/"}
+        className="text-left font-light text-white text-[26px] md:text-2xl px-6 py-3 md:px-0 md:py-0 m-0 underline block xl:hover:transition xl:hover:scale-105"
       >
         {text}
       </Link>

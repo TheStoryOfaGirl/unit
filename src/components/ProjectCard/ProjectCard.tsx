@@ -14,9 +14,9 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <>
-      <div className="h-[440px] w-[334px] bg-grey rounded-lg">
+      <div className="h-[440px] w-full md:w-[334px] bg-grey rounded-lg">
         <img
-          className="rounded-t-lg w-[334px] h-[200px] object-cover"
+          className="rounded-t-lg w-full md:w-[334px] h-[200px] object-cover"
           src={image}
           alt={name}
         />
@@ -24,11 +24,11 @@ export const ProjectCard = ({
           <p className="text-left text-3xl font-meduim line-clamp-2 text-white m-0 mb-4">
             {name}
           </p>
-          <p className="text-left text-lg text-white font-light line-clamp-3 m-0 mb-5">
+          <p className="text-left text-xl text-white font-light line-clamp-3 m-0 mb-5">
             {description}
           </p>
           <Link
-            className="block text-left text-light-grey text-lg truncate m-0 hover:text-white hover:opacity-95"
+            className="block text-left text-light-grey text-lg truncate m-0 active:text-white active:opacity-95 xl:hover:text-white xl:hover:opacity-95"
             to={link}
           >
             {link}

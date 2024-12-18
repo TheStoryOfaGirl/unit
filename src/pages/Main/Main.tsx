@@ -7,7 +7,6 @@ import {
   NewsCard,
   ProjectCard,
 } from "@components";
-import { URLS } from "./../../const";
 import { useEffect, useRef, useState } from "react";
 import { Member, News } from "types";
 import {
@@ -16,6 +15,8 @@ import {
   useGetProjectsQuery,
 } from "@utils";
 import srcMainImage from "./../../assets/img/pcHover.svg";
+import srcMainMobileImage from "./../../assets/img/mbHover.svg";
+import useWindowDimensions from "./../../hooks/useWindowDimensions";
 
 export const Main = () => {
   const { data: membersData, isLoading: isLoadingMembers } =
@@ -30,6 +31,7 @@ export const Main = () => {
 
   const imageRef = useRef<HTMLImageElement>(null);
   const [height, setHeight] = useState({ height: 0 });
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     function handleResize() {
@@ -50,7 +52,7 @@ export const Main = () => {
     <>
       <img
         ref={imageRef}
-        src={srcMainImage}
+        src={width > 428 ? srcMainImage : srcMainMobileImage}
         alt=""
         className="absolute top-0 left-0 w-full -z-10"
         onLoad={() =>
@@ -60,32 +62,32 @@ export const Main = () => {
       <div style={height}></div>
       {height.height && (
         <>
-          <div className="grid grid-cols-2 mb-[144px]">
+          <div className="md:grid md:grid-cols-2 mb-[144px]">
             <div>
-              <h2 className="text-left font-extrabold text-purple text-7xl m-0 mb-4">
+              <h2 className="text-6xl xl:text-7xl text-left font-extrabold text-purple m-0 mb-4">
                 Кто мы
               </h2>
-              <p className="text-left font-light text-white text-3xl m-0 mb-8">
+              <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0 mb-8">
                 Мы делаем реальные проекты: приложения, игры, сайты и всё, что
                 только захотим
               </p>
-              <p className="text-left font-light text-white text-3xl m-0">
+              <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0">
                 Если ты программист, художник или просто человек, который хочет
                 менять мир — присоединяйся к нам!
               </p>
             </div>
             <div></div>
           </div>
-          <div className="grid grid-cols-2 mb-[144px]">
+          <div className="md:grid md:grid-cols-2 mb-[144px]">
             <div>
-              <h2 className="text-left font-extrabold text-purple text-7xl m-0 mb-4">
+              <h2 className="text-6xl xl:text-7xl text-left font-extrabold text-purple m-0 mb-4">
                 Что мы делаем
               </h2>
-              <p className="text-left font-light text-white text-3xl m-0 mb-8">
+              <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0 mb-8">
                 Мы делаем реальные проекты: приложения, игры, сайты и всё, что
                 только захотим
               </p>
-              <p className="text-left font-light text-white text-3xl m-0">
+              <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0">
                 Если ты программист, художник или просто человек, который хочет
                 менять мир — присоединяйся к нам!
               </p>
@@ -93,7 +95,7 @@ export const Main = () => {
             <div></div>
           </div>
           <div className="mb-[144px]">
-            <h2 className="text-left font-extrabold text-purple text-7xl m-0 mb-4">
+            <h2 className="text-6xl xl:text-7xl text-left font-extrabold text-purple m-0 mb-4">
               Наши проекты
             </h2>
             <div className="flex flex-wrap gap-5 mb-6">
@@ -103,13 +105,13 @@ export const Main = () => {
                   <ProjectCard key={project.id} {...project} />
                 ))}
             </div>
-            <NavigateButton text={`☛ Все проекты`} path={URLS.PROJECTS} />
+            <NavigateButton text={`☛ Все проекты`} />
           </div>
           <div className="mb-[144px]">
-            <h2 className="text-left font-extrabold text-purple text-7xl m-0 mb-4">
+            <h2 className="text-6xl xl:text-7xl text-left font-extrabold text-purple m-0 mb-4">
               Новости
             </h2>
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
               {news
                 ?.slice(0, 2)
                 .map((newsItem: News) => (
@@ -120,23 +122,26 @@ export const Main = () => {
                   />
                 ))}
             </div>
-            <NavigateButton text={`☛ Все новости`} path={URLS.NEWS} />
+            <NavigateButton text={`☛ Все новости`} />
           </div>
           <div className="mb-[192px]">
-            <h2 className="text-left font-extrabold text-purple text-7xl m-0 mb-4">
+            <h2 className="text-6xl xl:text-7xl text-left font-extrabold text-purple m-0 mb-4">
               Участники
             </h2>
-            <div className="grid grid-cols-3  grid-flow-row-dense  gap-6 mb-6">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 grid-flow-row-dense gap-6 mb-6">
               {members
                 ?.slice(1, 6)
                 .map((member: Member) => (
                   <MemberCard key={member.id} {...member} />
                 ))}
             </div>
-            <NavigateButton text={`☛ Все участники`} path={URLS.MEMBERS} />
+            <NavigateButton text={`☛ Все участники`} />
           </div>
           <div className="mb-20">
-            <p className="text-left font-light text-white text-3xl m-0 mb-1">
+            <p
+              className="text-left font-light text-white text-3xl m-0 mb-1"
+              id="formId"
+            >
               Хочешь к нам?
             </p>
             <p className="text-left font-light text-white text-3xl m-0 mb-8">

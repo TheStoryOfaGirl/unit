@@ -13,11 +13,14 @@ export const NewsCard = ({ srcImage, title }: NewsCardProps) => {
     <>
       <Link
         to={"/"}
-        className="no-underline hover:underline hover:decoration-white"
+        className="no-underline xl:hover:underline xl:hover:decoration-white"
       >
-        <div className="rounded-lg bg-cover h-80 flex items-end" style={styles}>
-          <div className="pb-5">
-            <p className="text-left m-0 text-white font-medium text-4xl px-8 line-clamp-2 text-balance">
+        <div
+          className="rounded-lg bg-cover h-48 md:h-56 xl:h-80 flex items-end"
+          style={styles}
+        >
+          <div className="pb-2 xl:pb-5">
+            <p className="text-left m-0 text-white font-medium text-[28px] xl:text-4xl px-4 xl:px-8 line-clamp-2 text-balance">
               {title}
             </p>
           </div>

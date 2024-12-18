@@ -14,3 +14,7 @@ export const NAV_LIST = [
   "Участники",
   "Контакты",
 ];
+
+export const SCREEN_SIZES = {
+  MOBILE: 428,
+};
