@@ -16,8 +16,8 @@
 1. Склонировать репозиторий
 
 ```bash
-git clone https://github.com/TheStoryOfaGirl/Cringe.git
-cd Cringe
+git clone https://github.com/TheStoryOfaGirl/unit.git
+cd unit
 ```
 
 2. Установить зависимости
