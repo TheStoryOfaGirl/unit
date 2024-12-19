@@ -68,12 +68,7 @@ export const Main = () => {
                 Кто мы
               </h2>
               <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0 mb-8">
-                Мы делаем реальные проекты: приложения, игры, сайты и всё, что
-                только захотим
-              </p>
-              <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0">
-                Если ты программист, художник или просто человек, который хочет
-                менять мир — присоединяйся к нам!
+                Мы первое IT объединение в Екатеринбурге, появившееся в УрГЭУ. В 2024 году открыли филиал в УрФУ
               </p>
             </div>
             <div></div>
@@ -85,7 +80,7 @@ export const Main = () => {
               </h2>
               <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0 mb-8">
                 Мы делаем реальные проекты: приложения, игры, сайты и всё, что
-                только захотим
+                только захотим. Заводим новые знакомства, отдыхаем, организуем хакатоны
               </p>
               <p className="text-left font-light text-white text-[28px] xl:text-3xl m-0">
                 Если ты программист, художник или просто человек, который хочет
